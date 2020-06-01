@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"flag"
 	"fmt"
-	"github.com/DylanRamsook/sprout-daily-update/pkg"
+	"github.com/DylanRamsook/sprout-daily-tasks/pkg"
 	"log"
 	"time"
 )

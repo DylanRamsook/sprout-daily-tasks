@@ -3,7 +3,7 @@ package pkg
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/DylanRamsook/sprout-daily-update/sprout_api/activity_logs"
+	"github.com/DylanRamsook/sprout-daily-tasks/sprout_api/activity_logs"
 	"net/http"
 	"strings"
 )
