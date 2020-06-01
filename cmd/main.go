@@ -32,14 +32,6 @@ func main() {
 
 	//We need sessionId, token, and remember me for the cookie.
 	//Ex: sprout_session=Ch1ck3nT3nd1e5; remember_me=1; token=NiceTryGuy
-	//Lets loop through the headers for the ones we want
-	for name, value := range resp.Header {
-		fmt.Printf("%v: %v\n", name, value)
-	}
-	//var cooookiiessss = resp.Header.Values("Set-Cookie")
-	for index, each := range resp.Cookies() {
-		fmt.Printf("Cookie value [%d] is [%s]\n", index, each)
-	}
 	actResp, err := pkg.CreateSproutActivity(*urlPtr, *dateTimePtr, "90", resp.Cookies(), *rememberMePtr)
 	if err != nil {
 		log.Printf("Error creating activity, but I didn't test enough to have good error handling to tell you what went wrong.  Here is the Error message instead")
