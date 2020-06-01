@@ -1,19 +1,10 @@
 # Sprout Activity Recording
 Creates a Sprout task for you given your email, sprout url, and password for sprout.  Meant to be used with a scheduler
-like cron because I always forget to submit Sprout stuff.  You can probably just use task manager for Windows.  
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing
-purposes.  
+like cron because I always forget to submit Sprout stuff.  You can probably just use task manager for Windows.   
 
 ### Prerequisites
 
-A device that can run Go.
-
-```
-Golang :  https://golang.org/doc/install
-```
+Something that can run Go.  https://golang.org/doc/install
 
 ### Installing
 
