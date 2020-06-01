@@ -3,7 +3,7 @@ package pkg
 import (
 	"encoding/json"
 	"fmt"
-	. "github.com/DylanRamsook/sprout-daily-update/sprout_api/activity_logs"
+	"github.com/DylanRamsook/sprout-daily-update/sprout_api/activity_logs"
 	"net/http"
 	"strings"
 )
@@ -15,9 +15,9 @@ func CreateSproutActivity(sproutUrl string, date string, quantity string, cookie
 	method := "POST"
 
 	//Create a payload
-	p := new(CreateActivityRequest)
-	var activitySlice = []Activity{
-		Activity{24988, date, quantity},
+	p := new(activity_logs.CreateActivityRequest)
+	var activitySlice = []activity_logs.Activity{
+		activity_logs.Activity{24988, date, quantity},
 	}
 	p.Activities = activitySlice
 	p.Image = ""
