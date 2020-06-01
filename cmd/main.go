@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"github.com/DylanRamsook/sprout-daily-tasks/pkg"
 	"log"
+	"os"
 	"time"
 )
 
@@ -27,8 +28,12 @@ func main() {
 		log.Printf("Error authenticating, but I didn't test enough to have good error handling to tell you what went wrong.  Here is the Error message instead")
 		log.Printf(err.Error())
 	}
-
-	log.Printf("Authenticated successfully.  Probably.")
+	if resp.StatusCode == 200 {
+		log.Printf("Authenticated successfully.  Probably.")
+	} else {
+		log.Printf("Something went wrong during the auth request")
+		os.Exit(1)
+	}
 
 	//We need sessionId, token, and remember me for the cookie.
 	//Ex: sprout_session=Ch1ck3nT3nd1e5; remember_me=1; token=NiceTryGuy
