@@ -44,7 +44,6 @@ func CreateSproutActivity(sproutUrl string, date string, quantity string, cookie
 	//req.Header.Add("Cookie", "sprout_session=qg461esdksqvnejepnfoj817kpfeioqv; remember_me=1; token=7ef8b5187433d77212587b9c4a370c9b6682fbd7")
 
 	res, err := client.Do(req)
-	defer res.Body.Close()
 	//body, err := ioutil.ReadAll(res.Body)
 
 	//fmt.Println(string(body))

@@ -46,7 +46,7 @@ func main() {
 	buf := new(bytes.Buffer)
 	buf.ReadFrom(actResp.Body)
 	newStr := buf.String()
-
+	defer actResp.Body.Close()
 	fmt.Printf("Response was" + newStr)
 
 }
