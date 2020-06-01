@@ -37,8 +37,7 @@ func CreateSproutActivity(sproutUrl string, date string, quantity string, cookie
 		fmt.Println(err)
 	}
 	req.Header.Add("Content-Type", "application/json")
-	for i, s := range cookies {
-		fmt.Printf("Adding cookie index" + string(i))
+	for _, s := range cookies {
 		req.AddCookie(s)
 	}
 
